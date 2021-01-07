@@ -1,6 +1,22 @@
 <!DOCTYPE>
 <html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
 <style>
+    body {
+        background-color: cyan;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
     .container {
         font-size: 20px;
         font-weight: bold;
@@ -10,12 +26,18 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     
+    li {
+        list-style-type: none;
+        padding: 0px 20px;
+    }
+    
     .container .row {
         border: 1px solid black;
         border-radius: 10px;
         padding: 2% 10%;
         margin: 5%;
         align-content: center;
+        box-shadow: 10px 10px 10px;
     }
 </style>
 
@@ -25,7 +47,7 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam magnam voluptas sunt autem consequatur soluta ipsa culpa iure illum! Cupiditate adipisci dolores magnam quas sunt asperiores accusantium! Iusto, voluptates laborum!
             </p>
-            <button class="btn" id="btn-div1" onclick="changeColor(this)">
+            <button class="btn btn-primary center-block" id="btn-div1" onclick="changeColor(this)">
                     CLick 1 <span class="badge badge-primary"></span>
             </button>
         </div>
@@ -33,7 +55,7 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum commodi dignissimos fuga facilis qui iusto itaque at velit earum voluptate, quam pariatur reprehenderit, laborum consectetur perferendis minima beatae. Accusantium, eaque?
             </p>
-            <button class="btn" id="btn-div2" onclick="changeColor(this)">
+            <button class="btn btn-success center-block" id="btn-div2" onclick="changeColor(this)">
                 CLick 2 <span class="badge badge-primary"></span>
         </button>
         </div>
@@ -42,14 +64,14 @@
 <script type="text/javascript">
     function changeColor(thisId) {
         if ("btn-div1" === thisId.id) {
-            document.getElementById("div1").style.color = "green";
+            document.getElementById("div1").style.color = "blue";
             document.getElementById("div1").style.backgroundColor = "wheat";
             document.getElementById("div2").style.color = "red";
             document.getElementById("div2").style.backgroundColor = "white";
         } else {
             document.getElementById("div1").style.color = "red";
             document.getElementById("div1").style.backgroundColor = "white";
-            document.getElementById("div2").style.color = "green";
+            document.getElementById("div2").style.color = "blue";
             document.getElementById("div2").style.backgroundColor = "wheat";
         }
     }
